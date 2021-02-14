@@ -1,0 +1,441 @@
+{
+    "name": "metronic",
+    "theme": "metronic",
+    "desc": "Metronic build config file for Gulp",
+    "version": "7.2.0",
+    "config": {
+        "debug": false,
+        "compile": {
+            "rtl": {
+                "enabled": false,
+                "skip": [
+                    "select2",
+                    "socicon",
+                    "line-awesome",
+                    "flaticon",
+                    "flaticon2",
+                    "fontawesome5",
+                    "jstree",
+                    "bootstrap-datepicker",
+                    "bootstrap-switch",
+                    "tempusdominus-bootstrap-4",
+                    "nouislider",
+                    "tinymce",
+                    "sweetalert2",
+                    "jquery-mask-plugin"
+                ]
+            },
+            "jsMinify": false,
+            "cssMinify": false,
+            "jsSourcemaps": false,
+            "cssSourcemaps": false
+        },
+        "path": {
+            "src": "./../{demo}/src",
+            "node_modules": "./node_modules"
+        },
+        "dist": [
+            "./../{demo}/dist/assets"
+        ]
+    },
+    "build": {
+        "main": {
+            "src": {
+                "styles": [
+                    "{$config.path.src}/sass/style.scss"
+                ],
+                "scripts": [
+                    "{$config.path.src}/js/components/**/*.js",
+                    "{$config.path.src}/js/layout/**/*.js"
+                ]
+            },
+            "bundle": {
+                "styles": "{$config.dist}/css/style.bundle.css",
+                "scripts": "{$config.dist}/js/scripts.bundle.js"
+            }
+        },
+        "vendors": {
+            "base": {
+                "src": {
+                    "mandatory": {
+                        "jquery": {
+                            "scripts": [
+                                "{$config.path.node_modules}/jquery/dist/jquery.js"
+                            ]
+                        },
+                        "popper.js": {
+                            "scripts": [
+                                "{$config.path.node_modules}/popper.js/dist/umd/popper.js"
+                            ]
+                        },
+                        "bootstrap": {
+                            "scripts": [
+                                "{$config.path.node_modules}/bootstrap/dist/js/bootstrap.min.js"
+                            ]
+                        },
+                        "moment": {
+                            "scripts": [
+                                "{$config.path.node_modules}/moment/min/moment-with-locales.min.js"
+                            ]
+                        },
+                        "perfect-scrollbar": {
+                            "styles": [
+                                "{$config.path.node_modules}/perfect-scrollbar/css/perfect-scrollbar.css"
+                            ],
+                            "scripts": [
+                                "{$config.path.node_modules}/perfect-scrollbar/dist/perfect-scrollbar.js"
+                            ]
+                        },
+                        "wnumb": {
+                            "scripts": [
+                                "{$config.path.node_modules}/wnumb/wNumb.js"
+                            ]
+                        },
+                        "keenthemes-icons": {
+                            "styles": [
+                                "{$config.path.src}/plugins/keenthemes-icons/font/ki.css"
+                            ],
+                            "fonts": [
+                                "{$config.path.src}/plugins/keenthemes-icons/font/**"
+                            ]
+                        }
+                    },
+                    "optional": {
+                  
+                        "bootstrap-datepicker": {
+                            "styles": [
+                                "{$config.path.node_modules}/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css"
+                            ],
+                            "scripts": [
+                                "{$config.path.node_modules}/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js",
+                                "{$config.path.src}/js/vendors/plugins/bootstrap-datepicker.init.js"
+                            ]
+                        },
+                        "select2": {
+                            "styles": [
+                                "{$config.path.node_modules}/select2/dist/css/select2.css"
+                            ],
+                            "scripts": [
+                                "{$config.path.node_modules}/select2/dist/js/select2.full.js"
+                            ]
+                        },
+                    
+                        "nouislider": {
+                            "styles": [
+                                "{$config.path.node_modules}/nouislider/distribute/nouislider.css"
+                            ],
+                            "scripts": [
+                                "{$config.path.node_modules}/nouislider/distribute/nouislider.js"
+                            ]
+                        },
+                        "autosize": {
+                            "scripts": [
+                                "{$config.path.node_modules}/autosize/dist/autosize.js"
+                            ]
+                        },
+                       
+                        "tagify": {
+                            "styles": [
+                                "{$config.path.node_modules}/@yaireo/tagify/dist/tagify.css"
+                            ],
+                            "scripts": [
+                                "{$config.path.node_modules}/@yaireo/tagify/dist/tagify.polyfills.min.js",
+                                "{$config.path.node_modules}/@yaireo/tagify/dist/tagify.min.js"
+                            ]
+                        },
+                      
+                        "animate.css": {
+                            "styles": [
+                                "{$config.path.node_modules}/animate.css/animate.css"
+                            ]
+                        },
+                        "toastr": {
+                            "styles": [
+                                "{$config.path.node_modules}/toastr/build/toastr.css"
+                            ],
+                            "scripts": [
+                                "{$config.path.node_modules}/toastr/toastr.js"
+                            ]
+                        },
+                        
+                        "bootstrap-session-timeout": {
+                            "scripts": [
+                                "{$config.path.src}/plugins/bootstrap-session-timeout/dist/bootstrap-session-timeout.min.js"
+                            ]
+                        },
+                        "jquery-idletimer": {
+                            "scripts": [
+                                "{$config.path.src}/plugins/jquery-idletimer/idle-timer.min.js"
+                            ]
+                        },
+                    
+                       
+                        "sticky-js": {
+                            "scripts": [
+                                "{$config.path.node_modules}/sticky-js/dist/sticky.min.js"
+                            ]
+                        },
+                        "jquery.repeater": {
+                            "scripts": [
+                                "{$config.path.node_modules}/jquery.repeater/src/lib.js",
+                                "{$config.path.node_modules}/jquery.repeater/src/jquery.input.js",
+                                "{$config.path.node_modules}/jquery.repeater/src/repeater.js"
+                            ]
+                        },
+                   
+                      
+                    
+                        "@fortawesome": {
+                            "styles": [
+                                "{$config.path.node_modules}/@fortawesome/fontawesome-free/css/all.min.css"
+                            ],
+                            "fonts": [
+                                "{$config.path.node_modules}/@fortawesome/fontawesome-free/webfonts/**"
+                            ]
+                        }
+                    }
+                },
+                "bundle": {
+                    "styles": "{$config.dist}/plugins/global/plugins.bundle.css",
+                    "scripts": "{$config.dist}/plugins/global/plugins.bundle.js",
+                    "images": "{$config.dist}/plugins/global/images",
+                    "fonts": "{$config.dist}/plugins/global/fonts"
+                }
+            },
+            "custom": {
+                "draggable": {
+                    "src": {
+                        "scripts": [
+                            "{$config.path.node_modules}/@shopify/draggable/lib/draggable.bundle.js",
+                            "{$config.path.node_modules}/@shopify/draggable/lib/draggable.bundle.legacy.js",
+                            "{$config.path.node_modules}/@shopify/draggable/lib/draggable.js",
+                            "{$config.path.node_modules}/@shopify/draggable/lib/sortable.js",
+                            "{$config.path.node_modules}/@shopify/draggable/lib/droppable.js",
+                            "{$config.path.node_modules}/@shopify/draggable/lib/swappable.js",
+                            "{$config.path.node_modules}/@shopify/draggable/lib/plugins.js",
+                            "{$config.path.node_modules}/@shopify/draggable/lib/plugins/collidable.js",
+                            "{$config.path.node_modules}/@shopify/draggable/lib/plugins/resize-mirror.js",
+                            "{$config.path.node_modules}/@shopify/draggable/lib/plugins/snappable.js",
+                            "{$config.path.node_modules}/@shopify/draggable/lib/plugins/swap-animation.js"
+                        ]
+                    },
+                    "bundle": {
+                        "scripts": "{$config.dist}/plugins/custom/draggable/draggable.bundle.js"
+                    }
+                },
+                "prismjs": {
+                    "src": {
+                        "styles": [
+                            "{$config.path.node_modules}/prismjs/themes/prism.css"
+                        ],
+                        "scripts": [
+                            "{$config.path.node_modules}/prismjs/prism.js",
+                            "{$config.path.node_modules}/prismjs/plugins/normalize-whitespace/prism-normalize-whitespace.js",
+                            "{$config.path.src}/js/vendors/plugins/prism.init.js"
+                        ]
+                    },
+                    "bundle": {
+                        "styles": "{$config.dist}/plugins/custom/prismjs/prismjs.bundle.css",
+                        "scripts": "{$config.dist}/plugins/custom/prismjs/prismjs.bundle.js"
+                    }
+                },
+              
+                "uppy": {
+                    "src": {
+                        "styles": [
+                            "{$config.path.node_modules}/uppy/dist/uppy.min.css"
+                        ],
+                        "scripts": [
+                            "{$config.path.node_modules}/uppy/dist/uppy.min.js"
+                        ]
+                    },
+                    "bundle": {
+                        "styles": "{$config.dist}/plugins/custom/uppy/uppy.bundle.css",
+                        "scripts": "{$config.dist}/plugins/custom/uppy/uppy.bundle.js"
+                    }
+                },
+                "tinymce-js": {
+                    "src": {
+                        "scripts": [
+                            "{$config.path.node_modules}/tinymce/tinymce.min.js",
+                            "{$config.path.node_modules}/tinymce/themes/silver/theme.js",
+                            "{$config.path.node_modules}/tinymce/themes/mobile/theme.js"
+                        ]
+                    },
+                    "bundle": {
+                        "scripts": "{$config.dist}/plugins/custom/tinymce/tinymce.bundle.js"
+                    }
+                },
+                "tinymce": {
+                    "src": {
+                        "styles": [
+                            "{$config.path.node_modules}/tinymce/skins/**/*.css"
+                        ]
+                    },
+                    "output": {
+                        "styles": "{$config.dist}/plugins/custom/tinymce/skins"
+                    }
+                },
+                "tinymce-plugins": {
+                    "src": {
+                        "scripts": [
+                            "{$config.path.node_modules}/tinymce/plugins/**/*.js"
+                        ]
+                    },
+                    "output": {
+                        "scripts": "{$config.dist}/plugins/custom/tinymce/plugins"
+                    }
+                },
+                "tinymce-icons": {
+                    "src": {
+                        "scripts": [
+                            "{$config.path.node_modules}/tinymce/icons/**"
+                        ]
+                    },
+                    "output": {
+                        "scripts": "{$config.dist}/plugins/custom/tinymce/icons"
+                    }
+                },
+                "ckeditor-classic": {
+                    "src": {
+                        "scripts": [
+                            "{$config.path.node_modules}/@ckeditor/ckeditor5-build-classic/build/ckeditor.js"
+                        ]
+                    },
+                    "bundle": {
+                        "scripts": "{$config.dist}/plugins/custom/ckeditor/ckeditor-classic.bundle.js"
+                    }
+                },
+                "ckeditor-inline": {
+                    "src": {
+                        "scripts": [
+                            "{$config.path.node_modules}/@ckeditor/ckeditor5-build-inline/build/ckeditor.js"
+                        ]
+                    },
+                    "bundle": {
+                        "scripts": "{$config.dist}/plugins/custom/ckeditor/ckeditor-inline.bundle.js"
+                    }
+                },
+                "ckeditor-balloon": {
+                    "src": {
+                        "scripts": [
+                            "{$config.path.node_modules}/@ckeditor/ckeditor5-build-balloon/build/ckeditor.js"
+                        ]
+                    },
+                    "bundle": {
+                        "scripts": "{$config.dist}/plugins/custom/ckeditor/ckeditor-balloon.bundle.js"
+                    }
+                },
+                "ckeditor-balloon-block": {
+                    "src": {
+                        "scripts": [
+                            "{$config.path.node_modules}/@ckeditor/ckeditor5-build-balloon-block/build/ckeditor.js"
+                        ]
+                    },
+                    "bundle": {
+                        "scripts": "{$config.dist}/plugins/custom/ckeditor/ckeditor-balloon-block.bundle.js"
+                    }
+                },
+                "ckeditor-decoupled-document": {
+                    "src": {
+                        "scripts": [
+                            "{$config.path.node_modules}/@ckeditor/ckeditor5-build-decoupled-document/build/ckeditor.js"
+                        ]
+                    },
+                    "bundle": {
+                        "scripts": "{$config.dist}/plugins/custom/ckeditor/ckeditor-document.bundle.js"
+                    }
+                },
+                "jkanban": {
+                    "src": {
+                        "styles": [
+                            "{$config.path.node_modules}/jkanban/dist/jkanban.min.css"
+                        ],
+                        "scripts": [
+                            "{$config.path.node_modules}/jkanban/dist/jkanban.min.js"
+                        ]
+                    },
+                    "bundle": {
+                        "styles": "{$config.dist}/plugins/custom/kanban/kanban.bundle.css",
+                        "scripts": "{$config.dist}/plugins/custom/kanban/kanban.bundle.js"
+                    }
+                },
+                "leaflet": {
+                    "src": {
+                        "styles": [
+                            "{$config.path.node_modules}/leaflet/dist/leaflet.css",
+                            "{$config.path.node_modules}/esri-leaflet-geocoder/dist/esri-leaflet-geocoder.css"
+                        ],
+                        "scripts": [
+                            "{$config.path.node_modules}/leaflet/dist/leaflet.js",
+                            "{$config.path.node_modules}/esri-leaflet/dist/esri-leaflet.js",
+                            "{$config.path.node_modules}/esri-leaflet-geocoder/dist/esri-leaflet-geocoder.js"
+                        ]
+                    },
+                    "bundle": {
+                        "styles": "{$config.dist}/plugins/custom/leaflet/leaflet.bundle.css",
+                        "scripts": "{$config.dist}/plugins/custom/leaflet/leaflet.bundle.js"
+                    }
+                },
+                "cropperjs": {
+                    "src": {
+                        "styles": [
+                            "{$config.path.node_modules}/cropperjs/dist/cropper.css"
+                        ],
+                        "scripts": [
+                            "{$config.path.node_modules}/cropperjs/dist/cropper.js"
+                        ]
+                    },
+                    "bundle": {
+                        "styles": "{$config.dist}/plugins/custom/cropper/cropper.bundle.css",
+                        "scripts": "{$config.dist}/plugins/custom/cropper/cropper.bundle.js"
+                    }
+                },
+                "summernote-sourcemap": {
+                    "src": {
+                        "media": [
+                            "{$config.path.node_modules}/summernote/dist/summernote-bs4.js.map"
+                        ]
+                    },
+                    "output": {
+                        "media": "{$config.dist}/plugins/global"
+                    }
+                }
+            }
+        },
+        "pages": {
+            "src": {
+                "styles": [
+                    "{$config.path.src}/sass/pages/**/*.scss"
+                ],
+                "scripts": [
+                    "{$config.path.src}/js/pages/**/*.js"
+                ]
+            },
+            "output": {
+                "styles": "{$config.dist}/css/pages/",
+                "scripts": "{$config.dist}/js/pages/"
+            }
+        },
+        "theme": {
+            "src": {
+                "styles": [
+                    "{$config.path.src}/sass/themes/**/*.scss"
+                ]
+            },
+            "output": {
+                "styles": "{$config.dist}/css/themes/"
+            }
+        },
+        "media": {
+            "src": {
+                "media": [
+                    "{$config.path.src}/media/**/*.*"
+                ]
+            },
+            "output": {
+                "media": "{$config.dist}/media/"
+            }
+        }
+    }
+}

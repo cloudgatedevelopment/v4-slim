@@ -1,0 +1,182 @@
+{
+    "name": "metronic",
+    "theme": "metronic",
+    "desc": "Metronic build config file for Gulp",
+    "version": "7.2.0",
+    "config": {
+        "debug": false,
+        "compile": {
+            "rtl": {
+                "enabled": false,
+                "skip": [
+                    "select2",
+                    "socicon",
+                    "line-awesome",
+                    "flaticon",
+                    "flaticon2",
+                    "fontawesome5",
+                    "jstree",
+                    "bootstrap-datepicker",
+                    "bootstrap-switch",
+                    "tempusdominus-bootstrap-4",
+                    "nouislider",
+                    "tinymce",
+                    "sweetalert2",
+                    "jquery-mask-plugin"
+                ]
+            },
+            "jsMinify": false,
+            "cssMinify": false,
+            "jsSourcemaps": false,
+            "cssSourcemaps": false
+        },
+        "path": {
+            "src": "./../{demo}/src",
+            "node_modules": "./node_modules"
+        },
+        "dist": [
+            "./../{demo}/dist/assets"
+        ]
+    },
+    "build": {
+        "main": {
+            "src": {
+                "styles": [
+                    "{$config.path.src}/sass/style.scss"
+                ],
+                "scripts": [
+                    "{$config.path.src}/js/components/**/*.js",
+                    "{$config.path.src}/js/layout/**/*.js"
+                ]
+            },
+            "bundle": {
+                "styles": "{$config.dist}/css/style.bundle.css",
+                "scripts": "{$config.dist}/js/scripts.bundle.js"
+            }
+        },
+        "vendors": {
+            "base": {
+                "src": {
+                    "mandatory": {
+                        "jquery": {
+                            "scripts": [
+                                "{$config.path.node_modules}/jquery/dist/jquery.min.js"
+                            ]
+                        },
+                        "popper.js": {
+                            "scripts": [
+                                "{$config.path.node_modules}/popper.js/dist/umd/popper.min.js"
+                            ]
+                        },
+                        "bootstrap": {
+                            "scripts": [
+                                "{$config.path.node_modules}/bootstrap/dist/js/bootstrap.min.js"
+                            ]
+                        },  
+                        "moment": {
+                            "scripts": [
+                                "{$config.path.node_modules}/moment/min/moment-with-locales.min.js"
+                            ]
+                        },                     
+                        "perfect-scrollbar": {
+                            "styles": [
+                                "{$config.path.node_modules}/perfect-scrollbar/css/perfect-scrollbar.min.css"
+                            ],
+                            "scripts": [
+                                "{$config.path.node_modules}/perfect-scrollbar/dist/perfect-scrollbar.min.js"
+                            ]
+                        },                       
+                        "keenthemes-icons": {
+                            "styles": [
+                                "{$config.path.src}/plugins/keenthemes-icons/font/ki.css"
+                            ],
+                            "fonts": [
+                                "{$config.path.src}/plugins/keenthemes-icons/font/**"
+                            ]
+                        }
+                    },
+                    "optional": {                      
+                    
+                     
+                        "select2": {
+                            "styles": [
+                                "{$config.path.node_modules}/select2/dist/css/select2.min.css"
+                            ],
+                            "scripts": [
+                                "{$config.path.node_modules}/select2/dist/js/select2.full.min.js"
+                            ]
+                        },
+                      
+                       
+                   
+                     
+                        "toastr": {
+                            "styles": [
+                                "{$config.path.node_modules}/toastr/build/toastr.min.css"
+                            ],
+                            "scripts": [
+                                "{$config.path.node_modules}/toastr/toastr.min.js"
+                            ]
+                        },
+                     
+                     
+                   
+                        "sticky-js": {
+                            "scripts": [
+                                "{$config.path.node_modules}/sticky-js/dist/sticky.min.js"
+                            ]
+                        },
+                     
+                     
+                        "@fortawesome": {
+                            "styles": [
+                                "{$config.path.node_modules}/@fortawesome/fontawesome-free/css/all.min.css"
+                            ],
+                            "fonts": [
+                                "{$config.path.node_modules}/@fortawesome/fontawesome-free/webfonts/**"
+                            ]
+                        }
+                    }
+                },
+                "bundle": {
+                    "styles": "{$config.dist}/plugins/global/plugins.bundle.css",
+                    "scripts": "{$config.dist}/plugins/global/plugins.bundle.js",
+                    "images": "{$config.dist}/plugins/global/images",
+                    "fonts": "{$config.dist}/plugins/global/fonts"
+                }
+            }
+           
+        },
+        "pages": {
+            "src": {
+               
+                "scripts": [
+                    "{$config.path.src}/js/pages/**/*.js"
+                ]
+            },
+            "output": {
+                "scripts": "{$config.dist}/js/pages/"
+            }
+        },
+        "theme": {
+            "src": {
+                "styles": [
+                    "{$config.path.src}/sass/themes/**/*.scss"
+                ]
+            },
+            "output": {
+                "styles": "{$config.dist}/css/themes/"
+            }
+        },
+        "media": {
+            "src": {
+                "media": [
+                    "{$config.path.src}/media/**/*.*"
+                ]
+            },
+            "output": {
+                "media": "{$config.dist}/media/"
+            }
+        }
+    }
+}
