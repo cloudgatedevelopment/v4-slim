@@ -24,8 +24,8 @@
 	<!--begin::Layout Themes(used by all pages)-->
 	<link href="assets/css/themes/layout/header/base/light.css" rel="stylesheet" type="text/css" />
 	<link href="assets/css/themes/layout/header/menu/light.css" rel="stylesheet" type="text/css" />
-	<link href="assets/css/themes/layout/brand/dark.css" rel="stylesheet" type="text/css" />
-	<link href="assets/css/themes/layout/aside/dark.css" rel="stylesheet" type="text/css" />
+	<link href="assets/css/themes/layout/brand/light.css" rel="stylesheet" type="text/css" />
+	<link href="assets/css/themes/layout/aside/light.css" rel="stylesheet" type="text/css" />
 	<!--end::Layout Themes-->
 	<link rel="shortcut icon" href="assets/media/logos/favicon.ico" />
 </head>
@@ -154,7 +154,7 @@
 												<span class="menu-text">Administration</span>
 											</span>
 										</li>
-										<li class="menu-item" aria-haspopup="true">
+										<li class="menu-item" aria-haspopup="true" id="cal-main">
 											<a href="layout/themes/header-dark.html" class="menu-link">
 												<i class="menu-bullet menu-bullet-dot">
 													<span></span>
@@ -1902,7 +1902,7 @@
 					<!--begin::Entry-->
 					<div class="d-flex flex-column-fluid" id="main-container">
 						<!--begin::Container-->
-						<div class="container">
+						<div class="container-fluid">
 
 							<div class="tab-content mt-5" id="myTabContent">
 								<div class="tab-pane fade show active" id="kt_tab_pane_1" role="tabpanel"
@@ -2933,8 +2933,9 @@
 			var demos = function () {
 				// basic
 				$('#kt_select2_1').select2({
-					placeholder: "Select a state"
-				});
+					placeholder: "Select a state",
+					dropdownAutoWidth :true
+								});
 
 				$('#kt_select2_12').select2({
 					placeholder: "Select a state"
