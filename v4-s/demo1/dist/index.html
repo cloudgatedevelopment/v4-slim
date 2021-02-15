@@ -1903,6 +1903,22 @@
 					<div class="d-flex flex-column-fluid" id="main-container">
 						<!--begin::Container-->
 						<div class="container-fluid">
+							<!-- Propert has not been assigned for this calander period and unaudited statement. Please contact manager for further information.							</div> -->
+
+							<div id="msg-banner" class="alert alert-custom alert-light-danger alert-shadow gutter-t"
+								role="alert">
+								<div class="alert-icon">
+
+									<i class="fa fa-exclamation-triangle fa-sm" aria-hidden="true"></i>
+								</div>
+								<div class="alert-text">
+									Propert has not been assigned for this calander period and unaudited statement.
+									Please contact manager for further information.
+
+								</div>
+							</div>
+
+
 
 							<div class="tab-content mt-5" id="myTabContent">
 								<div class="tab-pane fade show active" id="kt_tab_pane_1" role="tabpanel"
@@ -1913,12 +1929,15 @@
 												<div class="card-header card-header-tabs-line">
 
 													<div class="card-title">
-														<a href="#"
-															class="btn btn-icon btn-sm btn-hover-light-primary mr-1"
-															data-card-tool="toggle" data-toggle="tooltip"
-															data-placement="top" title="Hide/Show">
-															<i class="ki ki-arrow-down icon-nm"></i>
-														</a>
+														<div class="card-toolbar">
+
+															<a href="#"
+																class="btn btn-icon btn-sm btn-hover-light-primary mr-1"
+																data-card-tool="toggle" data-toggle="tooltip"
+																data-placement="top" title="Hide/Show">
+																<i class="ki ki-arrow-down icon-nm"></i>
+															</a>
+														</div>
 														<button data-toggle="tooltip" title="Hide/Show All" class="btn"
 															onclick="hideShowAll()">
 															<i class="fa fa-bolt"></i>
@@ -1957,73 +1976,345 @@
 																			<span class="text-danger">*</span>
 																		</label>
 																		<div class="col-3">
-																			<input class="form-control" type="text"
-																				value="Artisanal kale"
-																				id="example-text-input" />
+																			<label id="prpName"
+																				class="col-form-label">101 South
+																				Division</label>
 																		</div>
 
 																		<label
-																			class="col-3 col-form-label text-right">Property
-																			Name
+																			class="col-3 col-form-label text-right">Credit
+																			Relationship
 																			<span class="text-danger">*</span>
 																		</label>
 																		<div class="col-3">
-																			<input class="form-control" type="text"
-																				value="Artisanal kale"
-																				id="example-text-input1" />
+																			<label id="prpCIR"
+																				class="col-form-label">No</label>
 																		</div>
 
 																	</div>
+
+
+
+																	<div class="form-group row">
+																		<label
+																			class="col-3 col-form-label text-right">Assumption
+																			Closing Date
+																		</label>
+																		<div class="col-3">
+																			<label id="prpClosingDate"
+																				class="col-form-label">---</label>
+																		</div>
+
+																		<label
+																			class="col-3 col-form-label text-right">Credit
+																			Tenant Lease
+																			<span class="text-danger">*</span>
+																		</label>
+																		<div class="col-3">
+																			<label id="lblprpCtl"
+																				class="col-form-label">No</label>
+																			<!-- <input class="form-control" type="text"
+																				value="Artisanal kale"
+																				id="example-text-input1" /> -->
+																		</div>
+
+																	</div>
+
+
+
+
+
+
+
+
+
+																	<div class="form-group row">
+																		<label
+																			class="col-3 col-form-label text-right">Sub
+																			Serviced
+																		</label>
+																		<div class="col-3">
+																			<label id="lblprpIsSubServiced"
+																				class="col-form-label">No</label>
+																		</div>
+
+																		<label
+																			class="col-3 col-form-label text-right">Sub
+																			Servicer
+																			<span class="text-danger">*</span>
+																		</label>
+																		<div class="col-3">
+																			<label id="prpSubServicer"
+																				class="col-form-label">No</label>
+																			<!-- <input class="form-control" type="text"
+																				value="Artisanal kale"
+																				id="example-text-input1" /> -->
+																		</div>
+
+																	</div>
+
+
+
+
+
+																	<div class="form-group row">
+																		<label
+																			class="col-3 col-form-label text-right">Property
+																			Type
+																			<span class="text-danger">*</span>
+
+																		</label>
+
+																		<div class="col-3">
+																			<label id="prpPropertyType"
+																				class="col-form-label">Multifamily
+																				(MF)</label>
+																		</div>
+
+																		<label
+																			class="col-3 col-form-label text-right">NOI
+																			Indicator
+																			<!-- <span class="text-danger">*</span> -->
+																		</label>
+																		<div class="col-3">
+																			<select class="form-control"
+																				id="noiindicator">
+																				<option>1</option>
+																				<option>2</option>
+																				<option>3</option>
+																				<option>4</option>
+																				<option>5</option>
+																			</select>
+																		</div>
+
+																	</div>
+
+
+
+
+
 																	<div class="form-group row">
 																		<label
 																			class="col-3 col-form-label text-right">Financial
 																			Indicator
-																			<span class="text-danger">*</span>
+
 																		</label>
+
 																		<div class="col-3">
-
-																			<select
-																				class="form-control col-sm-12 select2"
-																				id="kt_select2_d1" name="param">
-
-																				<option value="AR">Arkansas</option>
-																				<option value="IL">Illinois</option>
-																				<option value="IA">Iowa</option>
-																				<option value="KS">Kansas</option>
-																				<option value="KY">Kentucky</option>
-
+																			<select class="form-control"
+																				id="noiindicator">
+																				<option>1</option>
+																				<option>2</option>
+																				<option>3</option>
+																				<option>4</option>
+																				<option>5</option>
 																			</select>
 																		</div>
 
 																		<label
-																			class="col-3 col-form-label text-right">Date
+																			class="col-3 col-form-label text-right">DSCR
+																			Indicator
+																			<span class="text-danger">*</span>
+																		</label>
+																		<div class="col-3">
+																			<select class="form-control"
+																				id="dscrIndicator">
+																				<option>1</option>
+																				<option>2</option>
+																				<option>3</option>
+																				<option>4</option>
+																				<option>5</option>
+																			</select>
+																		</div>
+
+																	</div>
+
+																	<div class="form-group row">
+																		<label
+																			class="col-3 col-form-label text-right">Statement
+																			Begin
 																			<span class="text-danger">*</span>
 																		</label>
 																		<div class="col-3">
 																			<div class="input-group date">
-																				<input type="text" class="form-control"
-																					id="kt_datepicker_2"
+																				<input type="text"
+																					class="form-control g-date"
+																					id="prpBeginPeriod"
 																					readonly="readonly"
 																					placeholder="Select date">
 																				<div class="input-group-append">
 																					<span class="input-group-text">
-																						<i
-																							class="fa fa-calendar"></i>
+																						<i class="fa fa-calendar"></i>
+																					</span>
+																				</div>
+																			</div>
+
+																		</div>
+
+																		<label
+																			class="col-3 col-form-label text-right">Statement
+																			End
+																			<span class="text-danger">*</span>
+																		</label>
+																		<div class="col-3">
+																			<div class="input-group date">
+																				<input type="text"
+																					class="form-control g-date"
+																					id="prpEndPeriod"
+																					readonly="readonly"
+																					placeholder="Select date">
+																				<div class="input-group-append">
+																					<span class="input-group-text">
+																						<i class="fa fa-calendar"></i>
 																					</span>
 																				</div>
 																			</div>
 																		</div>
 																	</div>
 
-																	<div class="from-group row">
+
+
+																	<div class="form-group row">
 																		<label
-																			class="col-3 col-form-label text-right">Normal
-																			Select
+																			class="col-3 col-form-label text-right">Fiscal
+																			Year
+																		</label>
+																		<div class="col-3">
+																			<input class="form-control" type="text"
+																				value="2020" id="prpFiscal" />
+																		</div>
+
+																		<label
+																			class="col-3 col-form-label text-right">Average
+																			Rental Rate
+																		</label>
+																		<div class="col-3">
+																			<input class="form-control" type="text"
+																				value="0" id="prpArr" />
+																		</div>
+
+																	</div>
+
+																	<div class="form-group row">
+																		<label
+																			class="col-3 col-form-label text-right">Debt
+																			Allocated Loan %
+																		</label>
+																		<div class="col-3">
+																			<input class="form-control" type="text"
+																				value="2020" id="prpDepercent" />
+																		</div>
+
+																		<label
+																			class="col-3 col-form-label text-right">Current
+																			Allocated Loan %
+																		</label>
+																		<div class="col-3">
+																			<input class="form-control" type="text"
+																				value="0" id="prpCpercent" />
+																		</div>
+
+																	</div>
+
+
+
+																	<div class="form-group row">
+																		<label
+																			class="col-3 col-form-label text-right">Occupancy
 																			<span class="text-danger">*</span>
 																		</label>
 																		<div class="col-3">
+
+																			<input class="form-control" type="text"
+																				value="0" id="prpOccupancy" />
+																		</div>
+
+																		<label
+																			class="col-3 col-form-label text-right">As
+																			of
+																		</label>
+																		<div class="col-3">
+																			<div class="input-group date">
+																				<input type="text"
+																					class="form-control g-date"
+																					id="divprpOccupancyD"
+																					readonly="readonly"
+																					placeholder="Select date">
+																				<div class="input-group-append">
+																					<span class="input-group-text">
+																						<i class="fa fa-calendar"></i>
+																					</span>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+
+
+
+
+
+
+
+
+
+
+
+																	<div class="form-group row">
+																		<label
+																			class="col-3 col-form-label text-right">Property
+																			Sq. Footage
+																			<span class="text-danger">*</span>
+																		</label>
+																		<div class="col-3">
+																			<input class="form-control" type="text"
+																				value="2" id="prpSqft" />
+																		</div>
+
+																		<label
+																			class="col-3 col-form-label text-right">Units
+																			<span class="text-danger">*</span>
+																		</label>
+																		<div class="col-3">
+																			<input class="form-control" type="text"
+																				value="0" id="prpUnits" />
+																		</div>
+
+																	</div>
+
+
+
+
+
+
+
+																	<div class="form-group row">
+																		<label
+																			class="col-3 col-form-label text-right">Occupied Units/SF
+																		</label>
+																		<div class="col-3">
+																			<input class="form-control" type="text"
+																				value="2" id="unitsOc" />
+																		</div>
+
+																		<label
+																			class="col-3 col-form-label text-right">Vacant Units/SF
+																		</label>
+																		<div class="col-3">
+																			<input class="form-control" type="text"
+																				value="0" id="vunits" />
+																		</div>
+
+																	</div>
+
+
+
+																	<div class="from-group row">
+																		<label
+																			class="col-3 col-form-label text-right">Source of Record
+																		</label>
+																		<div class="col-3">
 																			<select class="form-control"
-																				id="exampleSelectd">
+																				id="sorSelect">
 																				<option>1</option>
 																				<option>2</option>
 																				<option>3</option>
@@ -2032,25 +2323,66 @@
 																			</select>
 																		</div>
 																		<label
-																			class="col-3 col-form-label text-right">Checkbox
-																			<span class="text-danger">*</span>
+																			class="col-3 col-form-label text-right">Assessment Due
 																		</label>
-																		<div class="col-3 col-form-label">
-																			<input type="checkbox" checked="checked"
-																				name="Checkboxes1">
+																		<div class="col-3">
+																			<div class="input-group date">
+																				<input type="text"
+																					class="form-control g-date"
+																					id="divprpAssessment"
+																					readonly="readonly"
+																					placeholder="Select date">
+																				<div class="input-group-append">
+																					<span class="input-group-text">
+																						<i class="fa fa-calendar"></i>
+																					</span>
+																				</div>
+																			</div>
 																		</div>
 																	</div>
+
+																	
+																	<div class="from-group row">
+																	
+																		<label for="chkExcludeOSAR"
+																			class="col-3 col-form-label text-right">Exclude from OSAR
+																		</label>
+																		<div class="col-3 col-form-label">
+																			<input id="chkExcludeOSAR" type="checkbox" checked="checked"
+																				name="chkExcludeOSAR">
+																		</div>
+																	</div>
+
 																	<div class="form-group row">
 																		<label
-																			class="col-3 col-form-label text-right">Textarea
+																			class="col-3 col-form-label text-right">OSAR Default Comments
 																			<span class="text-danger">*</span>
 																		</label>
-																		<div class="col-9">
-																			<textarea
+																		<div class="col-7">
+																			<textarea id="ossardescription"
 																				class="form-control form-control-solid mt-2"
 																				rows="3"></textarea>
 																		</div>
 																	</div>
+
+
+																	<div class="form-group row">
+																		<label
+																			class="col-3 col-form-label text-right">Spread Comments
+																			<span class="text-danger">*</span>
+																		</label>
+																		<div class="col-7">
+																			<textarea id="spreaddescription"
+																				class="form-control form-control-solid mt-2"
+																				rows="2"></textarea>
+																		</div>
+																		<div class="col-2">
+																			<button class="btn btn-sm btn-light-dark" type="button">
+History
+																			</button>
+</div>
+																	</div>
+
 																</div>
 															</form>
 														</div>
@@ -2083,12 +2415,15 @@
 											<div class="card card-custom mb-2" id="kt_card_122">
 												<div class="card-header card-header-tabs-line">
 													<div class="card-title">
-														<a href="#"
-															class="btn btn-icon btn-sm btn-hover-light-primary mr-1"
-															data-card-tool="toggle" data-toggle="tooltip"
-															data-placement="top" title="Hide/Show">
-															<i class="ki ki-arrow-down icon-nm"></i>
-														</a>
+														<div class="card-toolbar">
+
+															<a href="#"
+																class="btn btn-icon btn-sm btn-hover-light-primary mr-1"
+																data-card-tool="toggle" data-toggle="tooltip"
+																data-placement="top" title="Hide/Show">
+																<i class="ki ki-arrow-down icon-nm"></i>
+															</a>
+														</div>
 														<h3 class="card-label">Financial Information</h3>
 													</div>
 												</div>
@@ -2184,12 +2519,15 @@
 											<div class="card card-custom mb-2" id="kt_card_history">
 												<div class="card-header card-header-tabs-line">
 													<div class="card-title">
-														<a href="#"
-															class="btn btn-icon btn-sm btn-hover-light-primary mr-1"
-															data-card-tool="toggle" data-toggle="tooltip"
-															data-placement="top" title="Hide/Show">
-															<i class="ki ki-arrow-down icon-nm"></i>
-														</a>
+														<div class="card-toolbar">
+
+															<a href="#"
+																class="btn btn-icon btn-sm btn-hover-light-primary mr-1"
+																data-card-tool="toggle" data-toggle="tooltip"
+																data-placement="top" title="Hide/Show">
+																<i class="ki ki-arrow-down icon-nm"></i>
+															</a>
+														</div>
 
 														<h3 class="card-label">Financial Status History</h3>
 													</div>
@@ -2883,7 +3221,7 @@
 
 	<!--end::Quick Panel-->
 	<!--begin::Chat Panel-->
-	
+
 	<!--end::Chat Panel-->
 	<!--begin::Scrolltop-->
 	<div id="kt_scrolltop" class="scrolltop">
@@ -2934,8 +3272,8 @@
 				// basic
 				$('#kt_select2_1').select2({
 					placeholder: "Select a state",
-					dropdownAutoWidth :true
-								});
+					dropdownAutoWidth: true
+				});
 
 				$('#kt_select2_12').select2({
 					placeholder: "Select a state"
@@ -2959,7 +3297,8 @@
 				});
 
 				$('#kt_select2_d1').select2({
-					placeholder: "Select Finacials"
+					placeholder: "Select Finacials",
+					width: "100%"
 				});
 				// 
 
@@ -3165,7 +3504,7 @@
 			cardHistory.toggle();
 		}
 
-		$('#kt_datepicker_2').datepicker({
+		$('.g-date').datepicker({
 			orientation: 'bottom',
 			autoclose: true
 		});
