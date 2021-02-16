@@ -2281,31 +2281,31 @@ if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
 }
 
 // Plugin global lazy initialization
-// document.addEventListener("click", function (e) {
-//     var body = KTUtil.getByTagName('body')[0];
-//     var query;
-//     if ( query = body.querySelectorAll('.menu-nav .menu-item.menu-item-submenu.menu-item-hover:not(.menu-item-tabs)[data-menu-toggle="click"]') ) {
-//         for (var i = 0, len = query.length; i < len; i++) {
-//             var element = query[i].closest('.menu-nav').parentNode;
+document.addEventListener("click", function (e) {
+    var body = KTUtil.getByTagName('body')[0];
+    var query;
+    if ( query = body.querySelectorAll('.menu-nav .menu-item.menu-item-submenu.menu-item-hover:not(.menu-item-tabs)[data-menu-toggle="click"]') ) {
+        for (var i = 0, len = query.length; i < len; i++) {
+            var element = query[i].closest('.menu-nav').parentNode;
 
-//             if ( element ) {
-//                 var the = KTUtil.data(element).get('menu');
+            if ( element ) {
+                var the = KTUtil.data(element).get('menu');
 
-//                 if ( !the ) {
-//                     break;
-//                 }
+                if ( !the ) {
+                    break;
+                }
 
-//                 if ( !the || the.getSubmenuMode() !== 'dropdown' ) {
-//                     break;
-//                 }
+                if ( !the || the.getSubmenuMode() !== 'dropdown' ) {
+                    break;
+                }
 
-//                 if ( e.target !== element && element.contains(e.target) === false ) {
-//                     the.hideDropdowns();
-//                 }
-//             }
-//         }
-//     }
-// });
+                if ( e.target !== element && element.contains(e.target) === false ) {
+                    the.hideDropdowns();
+                }
+            }
+        }
+    }
+});
 
 "use strict";
 
