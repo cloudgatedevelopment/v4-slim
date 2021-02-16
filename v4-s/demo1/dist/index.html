@@ -2069,7 +2069,7 @@
 																			class="col-sm-12 col-md-3 col-form-label text-md-right font-weight-bold">NOI
 																			Indicator
 																		</label>
-																		<div class="col-3">
+																		<div class="col-sm-12 col-md-3">
 																			<select class="form-control"
 																				id="noiindicator">
 																				<option>1</option>
@@ -2088,11 +2088,7 @@
 
 																	<div class="row my-1">
 																		<label
-																			class="col-sm-12 col-md-3 col-form-label text-md-right font-weight-bold">Financial
-																			Indicator
-
-																		</label>
-
+																			class="col-sm-12 col-md-3 col-form-label text-md-right font-weight-bold">Financial Indicator</label>
 																		<div class="col-sm-12 col-md-3">
 																			<select class="form-control"
 																				id="noiindicator">
@@ -2533,15 +2529,134 @@ History
 														<div class="tab-pane fade" id="kt_tab_pane_2_3" role="tabpanel">
 															<button onclick="testAjax()" type="button"
 																class="btn btn-primary">Ajax Call</button>
+
+																<table class="table">
+																	<thead>
+																		<tr>
+																			<th scope="col">Item</th>
+																			<th scope="col">Amount</th>
+																			<th scope="col">Period Ending</th>
+																		</tr>
+																	</thead>
+																	<tbody>
+																		<tr>
+																			<td>Nick</td>
+																			<td>Stone</td>
+																			<td>
+																				<span
+																					class="label label-inline label-light-primary font-weight-bold">
+																					Pending
+																				</span>
+																			</td>
+																		</tr>
+																		<tr>
+																			<td>Ana</td>
+																			<td>Jacobs</td>
+																			<td>
+																				<span
+																					class="label label-inline label-light-success font-weight-bold">
+																					Approved
+																				</span>
+																			</td>
+																		</tr>
+																		<tr>
+																			<td>Larry</td>
+																			<td>Pettis</td>
+																			<td>
+																				<span
+																					class="label label-inline label-light-danger font-weight-bold">
+																					New
+																				</span>
+																			</td>
+																		</tr>
+																	</tbody>
+																</table>
+
 														</div>
 													</div>
 												</div>
 											</div>
 										</div>
-										<div class="col-xl-3">
-											<div class="alert alert-custom alert-white alert-shadow fade show gutter-b"
+										<div class="col-xl-3 px-md-0">
+											<!-- <div> -->
+												<div class="alert alert-custom alert-white alert-shadow fade show gutter-b px-1"
 												role="alert">
+												<table class="font-weight-bold col-12 table-hover" style="font-size: 60%;">
+													<thead>
+														<tr>
+															<th scope="col">Investor Number</th>
+															<th scope="col">Loan Number</th>
+															<th scope="col">Note Type</th>
+															<th scope="col">UPB</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td class="text-break">20925:GSMC06GGB</td>
+															<td class="text-break">
+															<a href="javascript:void(0)">
 
+																3099999927
+															</a>
+																<div
+																class="text-danger font-weight-bold">
+																LEAD
+														</div>
+															</td>
+															<td>
+															A1
+															</td>
+															<td class="text-break text-right">$165,643,200.00</td>
+														</tr>
+														<tr>
+															<td class="text-break">20106:CONCORD061</td>
+															<td class="text-break">
+																<a href="javascript:void(0)">
+
+																3099999929</a>
+															
+															</td>
+															<td>
+															IN
+															</td>
+															<td class="text-break text-right">$0.00</td>
+														</tr>
+														<tr>
+															<td class="text-break">20543:MORGANEAST</td>
+															<td class="text-break"><a href="javascript:void(0)">
+
+																3099999928
+															</a>
+																<div
+																class="text-danger font-weight-bold">
+																LEAD
+														</div>
+															</td>
+															<td>
+															B0
+															</td>
+															<td class="text-break text-right">$165,643,200.00</td>
+														</tr>
+													
+													</tbody>
+													<tfoot> 
+														<tr>
+															<td class="text-break">
+																<span
+																class="text-danger">
+																Total
+															</span>
+															</td>
+															<td class="text-break">
+																
+															</td>
+															<td>
+															</td>
+															<td class="text-break text-danger text-right">$165,643,200.00</td>
+														</tr>
+													</tfoot>
+
+												</table>
 											</div>
 
 
@@ -2636,7 +2751,7 @@ History
 													</div>
 												</div>
 												<div class="card-body">
-													<table class="table">
+													<table class="table table-hover table-sm">
 														<thead>
 															<tr>
 																<th scope="col">#</th>
@@ -2741,7 +2856,7 @@ History
 													</div>
 												</div>
 												<div class="card-body">
-													<table class="table">
+													<table class="table table-hover">
 														<thead>
 															<tr>
 																<th scope="col">#</th>
