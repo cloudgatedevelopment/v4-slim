@@ -53585,9 +53585,7 @@ button {
 .nav.nav-tabs.nav-tabs-line.nav-tabs-line-active-border-success .nav-link:hover:not(.disabled),
 .nav.nav-tabs.nav-tabs-line.nav-tabs-line-active-border-success .nav-link.active,
 .nav.nav-tabs.nav-tabs-line.nav-tabs-line-active-border-success .show > .nav-link {
-  /* border-bottom-color: #1BC5BD !important; */
-    border-bottom-color: #fff !important;
-
+  border-bottom-color: #1BC5BD !important;
 }
 .nav.nav-tabs.nav-tabs-line.nav-tabs-line-info {
   border-bottom-color: #EEE5FF !important;
