@@ -10,7 +10,7 @@ $root-font-size-md:                             	12px; // Root font size for mob
 // Layout Theme Colors
 $layout-themes: (
 	dark:  #1e1e2d, // Dark theme color
-	light: #ffffff // Light theme color
+	light:#FAFBFC// #ffffff // Light theme color
 ) !default;
 
 // Page Background Color
@@ -337,7 +337,7 @@ $header-menu-config: (
 											default: $text-muted,
 											active: $primary,
 											here: $primary,
-											hover: $primary
+											hover: $primary											
 										)
 									),
 
@@ -1222,7 +1222,7 @@ $aside-config: (
 	offcanvas-mobile: (
 		width: 275px,
 		zindex: 1001,
-		bg-color: #ffffff,
+		bg-color:#FAFBFC,// #ffffff,
 		shadow: 0px 1px 9px -3px rgba(0,0,0,0.75),
 		overlay-bg-color: rgba(#000000, 0.1)
 	)
@@ -2036,7 +2036,7 @@ $aside-menu-config: (
 			                            default: $text-muted,
 			                            open: $primary,
 			                            here: $primary,
-			                            active: $primary,
+			                            active:$primary,
 			                            hover: $primary
 			                        )
 			                    ),
@@ -2116,10 +2116,11 @@ $aside-menu-config: (
 			                        // Icon
 			                        icon:	(
 			                            font-color:	(
-			                                default: $text-muted,
-			                                open: $primary,
-			                                active: $primary,
-			                                hover: $primary
+			                                default:red,
+									 // $text-muted,
+			                                open: red,//$primary,
+			                                active: red,//$primary,
+			                                hover: red,//$primary
 			                            )
 			                        ),
 
@@ -2221,10 +2222,17 @@ $aside-menu-config: (
 			                // Icon
 			                icon:	(
 			                    font-color:	(
-			                        default: $text-muted,
-			                        open: $primary,
-			                        active: $primary,
-			                        hover: $primary,
+									font-color:	(
+										default:red,
+								 // $text-muted,
+										open: red,//$primary,
+										active: red,//$primary,
+										hover: red,//$primary
+									)
+			                        // default: $text-muted,
+			                        // open: $primary,
+			                        // active: $primary,
+			                        // hover: $primary,
 			                    )
 			                )
 			            )

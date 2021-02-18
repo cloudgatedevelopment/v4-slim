@@ -7,8 +7,9 @@
 @import "../../../init";
 
 // Variables
-$brand-bg: get($layout-themes, light);
-$brand-icon-color: #b4b8ce;
+$brand-bg: #d71e2b;//get($layout-themes, light);
+$brand-border-bottom: 4px solid #fcc60a;
+$brand-icon-color:#181C32;// #b4b8ce;
 $brand-icon-color-hover: $primary;
 
 $header-mobile-bg: $brand-bg;
@@ -20,6 +21,7 @@ $header-mobile-icon-color-hover: $primary;
 @include media-breakpoint-up(lg) {
 	.brand {
 	    background-color: $brand-bg;
+		border-bottom:$brand-border-bottom;
     	box-shadow: none;
 
 		// Button
@@ -49,6 +51,7 @@ $header-mobile-icon-color-hover: $primary;
 @include media-breakpoint-down(md) {
 	.header-mobile {
 		background-color: $header-mobile-bg;
+		border-bottom:$brand-border-bottom;
 		box-shadow: $header-mobile-shadow;
 
 		// Burger Icon

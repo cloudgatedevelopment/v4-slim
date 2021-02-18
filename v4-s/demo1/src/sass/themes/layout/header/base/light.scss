@@ -21,7 +21,9 @@ $topbar-shadow-mobile: 0px 0px 40px 0px rgba(82,63,105, 0.2);
 // Desktop Mode
 @include media-breakpoint-up(lg) {
 	.header {
-		background-color: $header-bg;
+	//	background-color//$header-bg;
+	background-color: #d71e2b;
+    border-bottom: 4px solid #fcc60a;
 
 		// Fixed header
 		.header-fixed & {

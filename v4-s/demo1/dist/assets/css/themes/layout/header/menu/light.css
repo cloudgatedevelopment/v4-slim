@@ -318,7 +318,7 @@
 }
 @media (max-width: 991.98px) {
   .header-menu-mobile {
-    background-color: #ffffff;
+    background-color: #FAFBFC;
   }
   .header-menu-mobile .menu-nav > .menu-item > .menu-heading .menu-text,
 .header-menu-mobile .menu-nav > .menu-item > .menu-link .menu-text {
@@ -508,7 +508,7 @@
     color: #3699FF;
   }
   .header-menu-mobile .menu-nav > .menu-item > .menu-arrow {
-    color: #ffffff;
+    color: #FAFBFC;
   }
   .header-menu-mobile .menu-nav > .menu-section .menu-text {
     color: #7E8299;

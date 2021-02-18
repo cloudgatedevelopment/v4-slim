@@ -58,7 +58,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 body {
   margin: 0;
-  font-family: Poppins, Helvetica, "sans-serif";
+  font-family: Verdana, Arial, "sans-serif";
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -6961,7 +6961,7 @@ a.close.disabled {
   z-index: 1070;
   display: block;
   margin: 0;
-  font-family: Poppins, Helvetica, "sans-serif";
+  font-family: Verdana, Arial, "sans-serif";
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -7063,7 +7063,7 @@ a.close.disabled {
   z-index: 1060;
   display: block;
   max-width: 276px;
-  font-family: Poppins, Helvetica, "sans-serif";
+  font-family: Verdana, Arial, "sans-serif";
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -76679,7 +76679,7 @@ body {
   padding: 0px;
   font-size: 13px !important;
   font-weight: 400;
-  font-family: Poppins, Helvetica, "sans-serif";
+  font-family: Verdana, Arial, "sans-serif";
   -ms-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -79449,7 +79449,7 @@ body {
 }
 @media (max-width: 991.98px) {
   .aside {
-    background: #ffffff;
+    background: #FAFBFC;
     -webkit-box-shadow: 0px 1px 9px -3px rgba(0, 0, 0, 0.75);
     box-shadow: 0px 1px 9px -3px rgba(0, 0, 0, 0.75);
   }
