@@ -75848,7 +75848,7 @@ button {
   border: 1px solid #E4E6EF;
   outline: none !important;
   border-radius: 0.42rem;
-  height: auto;
+  max-height: calc(1.35em + 1.1rem + 2px);
   line-height: 0;
 }
 .select2-container--default .select2-selection--single .select2-selection__placeholder,

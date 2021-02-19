@@ -13,7 +13,8 @@
         border: 1px solid $input-border-color;
         outline: none !important;
         @include border-radius($input-border-radius);
-        height: auto;
+        max-height: calc(1.35em + 1.1rem + 2px);
+        // height: auto;
         line-height: 0;
 
         .select2-selection__placeholder {
