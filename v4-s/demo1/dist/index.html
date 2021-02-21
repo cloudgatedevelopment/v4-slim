@@ -257,7 +257,8 @@
 															<i class="menu-bullet menu-bullet-dot">
 																<span></span>
 															</i>
-															<span class="menu-text text-white">Underwriting Upload</span>
+															<span class="menu-text text-white">Underwriting
+																Upload</span>
 														</a>
 													</li>
 													<li class="menu-item" aria-haspopup="true">
@@ -787,7 +788,8 @@
 															<i class="menu-bullet menu-bullet-dot">
 																<span></span>
 															</i>
-															<span class="menu-text text-white">Individual Assignment</span>
+															<span class="menu-text text-white">Individual
+																Assignment</span>
 														</a>
 													</li>
 													<li class="menu-item" aria-haspopup="true">
@@ -1613,7 +1615,7 @@
 							<div class="d-flex align-items-center">
 								<!--begin::Actions-->
 
-								<a href="#" onclick="hideShow()" class="btn btn-icon" aria-expanded="false">
+								<a href="#" onclick="gData.hideShow()" class="btn btn-icon" aria-expanded="false">
 									<!-- <a href="#" id="hideShow" class="btn btn-icon" aria-expanded="false"> -->
 
 									<span class="svg-icon svg-icon-danger svg-icon-2x">
@@ -1988,8 +1990,7 @@
 																	<span class="nav-icon">
 																		<span
 																			class="svg-icon svg-icon-primary svg-icon-2x">
-																			<svg																		
-																				width="24px" height="24px"
+																			<svg width="24px" height="24px"
 																				viewBox="0 0 24 24" version="1.1">
 																				<g stroke="none" stroke-width="1"
 																					fill="none" fill-rule="evenodd">
@@ -2035,9 +2036,7 @@
 																	<span class="nav-icon">
 																		<span
 																			class="svg-icon svg-icon-primary svg-icon-2x">
-																			<svg
-																			
-																				width="24px" height="24px"
+																			<svg width="24px" height="24px"
 																				viewBox="0 0 24 24" version="1.1">
 																				<g stroke="none" stroke-width="1"
 																					fill="none" fill-rule="evenodd">
@@ -3698,49 +3697,8 @@
 			};
 		}();
 
-		// Initialization
-		jQuery(document).ready(function () {
-			KTSelect2.init();
-		});
-		KTLayoutHeaderDropdowns.init("dropdown-head");
-		var el = KTLayoutHeaderDropdowns.getToggleElement();
-		var outerHeightDropdowns = KTUtil.actualHeight(el);
-		var head="";
-		var outerHeightHead="";
-		var subheaderHeight=KTLayoutSubheader.getHeight();
-		setTimeout(function(){
-
-			head=KTLayoutHeader.getElement();
-			 outerHeightHead = KTUtil.actualHeight(head);
-
-
-
-
-			 
-		},2000
-
-		)
-
-//console.log({outerHeightDropdowns,outerHeightHead,subheaderHeight})
-
-		var height =  outerHeightDropdowns-45;// - (outerHeightHead+subheaderHeight);
-		var isInit = false;
-		if (outerHeightDropdowns > 0) {
-			$("#main-container").css("margin-top", height + "px");
-		}
-		function hideShow() {
-			// var el=KTLayoutHeaderDropdowns.getToggleElement();
-			// var height=KTUtil.height(el);
-			$("#dropdown-head").toggle();
-			if (isInit) {
-				$("#main-container").css("margin-top", height + "px");
-				isInit = false;
-			} else {
-				$("#main-container").css("margin-top", "0px");
-				isInit = true;
-			}
-		}
-
+	
+	
 		var card = new KTCard('kt_card_1');
 		var card1 = new KTCard('kt_card_4');
 		var card2 = new KTCard('kt_card_122');
@@ -3768,23 +3726,115 @@
 				}
 			});
 		}
-		//     background-color: #d71e2b;
-    //border-bottom: 4px solid #fcc60a;
-	// (function(){
-	// 	var smMenu=KTCookie.getCookie("sm-menu");
-	// 	if(smMenu==null){
-	// 		KTCookie.setCookie("sm-menu",0);
-	// 	}else if(smMenu=="0"){
-	// 	//	KTCookie.setCookie("sm-menu",1);
+		// Initialization
+		jQuery(document).ready(function () {
+			KTSelect2.init();
+			$('.g-select2').select2({
+					placeholder: "Select items",
+					width: "100%",
+					height: "20px",
+					dropdownAutoWidth: true
+				});
+			gData.contentId="#kt_content";//"#main-container"
+			KTLayoutHeaderDropdowns.init("dropdown-head");
+			var height = gData.marginTopContent();
+			gData.isInit = false;
+		if (height > 0) {
+			$(gData.contentId).css("margin-top", height + "px");
+		}
+	});
 
-	// 	}else if(smMenu=="1"){
-	// 	//	KTCookie.setCookie("sm-menu",0);
+
+var gData={
+	isInit:false,
+	_marginTopContent:0,
+	contentId:"",
+	 marginTopContent:function () {
+		//	if (gData._marginTopContent == 0) {
+				var head = KTLayoutHeader.getElement();
+				var headHeight = KTUtil.actualHeight(head);
+				var headerDropdowns = KTLayoutHeaderDropdowns.getToggleElement();
+				var headerDropdownsHeight = KTUtil.actualHeight(headerDropdowns);
+				var subheaderHeight = KTLayoutSubheader.getHeight();
+				//console.log({headerDropdownsHeight,headHeight,subheaderHeight});
+				return gData._marginTopContent=headerDropdownsHeight-(headHeight+25);//+22+3;
+		},
+		hideShow:function() {
+			var height=gData.marginTopContent();
+			$("#dropdown-head").toggle();
+			if (gData.isInit) {
+				$(gData.contentId).css("margin-top", height + "px");
+				gData.isInit = false;
+			} else {
+				$(gData.contentId).css("margin-top", "0px");
+				gData.isInit = true;
+			}
+		}
+};
+
+	// var _marginTopContent = 0;
+	// 	var marginTopContent = function () {
+	// 		if (_marginTopContent == 0) {
+	// 			var head = KTLayoutHeader.getElement();
+	// 			var headHeight = KTUtil.actualHeight(head);
+	// 			var headerDropdowns = KTLayoutHeaderDropdowns.getToggleElement();
+	// 			var headerDropdownsHeight = KTUtil.actualHeight(headerDropdowns);
+	// 			var subheaderHeight = KTLayoutSubheader.getHeight();
+	// 			console.log({headerDropdownsHeight,headHeight,subheaderHeight});
+	// 			return _marginTopContent=headerDropdownsHeight-headHeight-subheaderHeight;
+	// 		} else {
+	// 			return _marginTopContent;
+	// 		}
+	// 	};
+
+
+		// var height = marginTopContent(); //outerHeightDropdowns - outerHeightHead - subheaderHeight;//45;// - (outerHeightHead+subheaderHeight);
+		// var isInit = false;
+		// if (height > 0) {
+		// 	$("#main-container").css("margin-top", height + "px");
+		// }
+
+	// function hideShow() {
+	// 		// var el=KTLayoutHeaderDropdowns.getToggleElement();
+	// 		// var height=KTUtil.height(el);
+	// 		var height=marginTopContent();
+	// 		$("#dropdown-head").toggle();
+	// 		if (isInit) {
+	// 			$("#main-container").css("margin-top", height + "px");
+	// 			isInit = false;
+	// 		} else {
+	// 			$("#main-container").css("margin-top", "0px");
+	// 			isInit = true;
+	// 		}
 	// 	}
-	// }());
 
-	// $("#kt_aside_toggle").on("click",function(){
 
-	// });
+	
+
+
+
+
+
+
+
+
+		//     background-color: #d71e2b;
+		//border-bottom: 4px solid #fcc60a;
+		// (function(){
+		// 	var smMenu=KTCookie.getCookie("sm-menu");
+		// 	if(smMenu==null){
+		// 		KTCookie.setCookie("sm-menu",0);
+		// 	}else if(smMenu=="0"){
+		// 	//	KTCookie.setCookie("sm-menu",1);
+
+		// 	}else if(smMenu=="1"){
+		// 	//	KTCookie.setCookie("sm-menu",0);
+		// 	}
+		// }());
+
+		// $("#kt_aside_toggle").on("click",function(){
+
+		// });
 
 	</script>
 </body>
