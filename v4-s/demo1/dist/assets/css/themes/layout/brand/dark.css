@@ -1,16 +1,16 @@
 @media (min-width: 992px) {
   .brand {
-    background-color: #1a1a27;
+    background-color: #3b3331;
     -webkit-box-shadow: none;
     box-shadow: none;
   }
   .brand .btn i {
-    color: #494b74;
+    color: #ffffff;
   }
   .brand .btn .svg-icon svg g [fill] {
     -webkit-transition: fill 0.3s ease;
     transition: fill 0.3s ease;
-    fill: #494b74;
+    fill: #ffffff;
   }
   .brand .btn .svg-icon svg:hover g [fill] {
     -webkit-transition: fill 0.3s ease;

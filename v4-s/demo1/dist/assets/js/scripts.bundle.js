@@ -5649,7 +5649,6 @@ var KTLayoutContent = function() {
         height = height - KTLayoutHeader.getHeight();
         height = height - KTLayoutSubheader.getHeight();
         height = height - KTLayoutFooter.getHeight();
-
 		return height;
 	}
 
@@ -5726,7 +5725,15 @@ var KTLayoutHeaderDropdowns = function() {
             toggleState: 'active',
         });
     }
+	var _getHeight = function() {
+        var height = 0;
 
+        if (_toggleObject) {
+            height = KTUtil.actualHeight(_element) + 1;
+        }
+
+        return height;
+    }
 
 
     /**
@@ -5768,6 +5775,9 @@ var KTLayoutHeaderDropdowns = function() {
 
         getToggleElement: function() {
             return _toggleElement;
+        },
+		getHeight: function() {
+            return _getHeight();
         }
 	};
 }();

@@ -1,5 +1,5 @@
 .aside {
-  background-color: #1e1e2d;
+  background-color: #3b3331;
 }
 .aside .aside-menu.ps > .ps__rail-x {
   background-color: transparent;
@@ -39,7 +39,7 @@
 }
 
 .aside-menu {
-  background-color: #1e1e2d;
+  background-color: #3b3331;
 }
 .aside-menu .menu-nav > .menu-item > .menu-heading .menu-text,
 .aside-menu .menu-nav > .menu-item > .menu-link .menu-text {
@@ -229,7 +229,7 @@
   color: #ffffff;
 }
 .aside-menu .menu-nav > .menu-item > .menu-arrow {
-  color: #1e1e2d;
+  color: #3b3331;
 }
 .aside-menu .menu-nav > .menu-section .menu-text {
   color: #4c4e6f;

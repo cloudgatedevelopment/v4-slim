@@ -17,7 +17,6 @@ var KTLayoutContent = function() {
         height = height - KTLayoutHeader.getHeight();
         height = height - KTLayoutSubheader.getHeight();
         height = height - KTLayoutFooter.getHeight();
-
 		return height;
 	}
 
